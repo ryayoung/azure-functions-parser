@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "azure-functions-parser"
+version = '0.0.1'
+python_requires = ">=3.11"
+description = "Parse and validate HTTP requests for Azure Functions"
+authors = [
+    {name = "Ryan Young", email = "dev@ryayoung.com"}
+]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/ryayoung/azure-functions-parser"
+repository = "https://github.com/ryayoung/azure-functions-parser"
+documentation = "https://azure-functions-parser.readthedocs.io"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries"
+]
+dependencies = [
+    'pydantic',
+    'azure-functions'
+]
+
+[tool.hatch.build.targets.sdist]
+packages = ["azure"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["azure"]
